@@ -3,8 +3,15 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const searchTerm = form.elements.query.value;
     const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
-    console.log(res.data);
-    const img = document.createElement('IMG');
-    img.src = res.data[0].show.image.medium;
-    document.body.append(img);
+    showImages(res.data);
 })
+
+function showImages(shows) {
+    for (let result of shows) {
+        if (result.show.image) {
+            const img = document.createElement('IMG');
+            img.src = result.show.image.medium;
+            document.body.append(img);
+        }
+    }
+}
