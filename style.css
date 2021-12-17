@@ -5,6 +5,7 @@
 }
 body {
     background-color: rgba(140, 145, 171);
+    font-family: Helvetica, sans-serif;
 }
 .row {
     display: grid;
