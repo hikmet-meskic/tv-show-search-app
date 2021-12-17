@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgba(140, 145, 171);
+    background-color: rgb(76, 156, 85);
     font-family: Helvetica, sans-serif;
     text-align: center;
 }
@@ -16,12 +16,41 @@ h1 {
     font-size: 2rem;
     font-weight: 900;
     text-decoration: overline;
-    text-shadow: 4px 4px 5px red;
+    text-shadow: 2px 2px 3px rgb(119, 1, 38);
     line-height: 1.5;
+    border-bottom: thick double rgb(95, 2, 31);
 }
 
 form {
     display: inline-block;
+}
+
+input[type="search"] {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 20px;
+    padding: 2px 2px 2px 3px;
+    outline: 0;
+    background-color: rgb(245, 245, 245);
+    transition-duration: 0.4s;
+}
+
+input[type="search"]:hover, input[type="search"]:focus {
+    background-color: white;
+}
+
+button {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 20px;
+    padding: 2px 2px 2px 3px;
+    background-color: rgb(245, 245, 245);
+    transition-duration: 0.4s;
+}
+
+button:hover, button:focus {
+    background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .row {
@@ -33,9 +62,9 @@ form {
 
 .column {
     background-color: rgba(255, 255, 255, 0.8);
+    margin: 2% 0;
     font-size: 30px;
     text-align: center;
-    margin: 2% 0;
 }
 
 @media screen and (max-width: 880px) {
