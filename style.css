@@ -10,6 +10,16 @@ body {
     text-align: center;
 }
 
+h1 {
+    color: rgb(95, 2, 31);
+    margin: 0.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: overline;
+    text-shadow: 4px 4px 5px red;
+    line-height: 1.5;
+}
+
 form {
     display: inline-block;
 }
