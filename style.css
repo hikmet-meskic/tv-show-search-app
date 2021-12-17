@@ -3,10 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: rgba(140, 145, 171);
     font-family: Helvetica, sans-serif;
+    text-align: center;
 }
+
+form {
+    display: inline-block;
+}
+
 .row {
     display: grid;
     grid-template-columns: auto auto auto auto;
