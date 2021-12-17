@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: rgba(140, 145, 171);
+}
 .row {
     display: grid;
     grid-template-columns: auto auto auto auto;
