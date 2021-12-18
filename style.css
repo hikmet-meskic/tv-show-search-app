@@ -73,6 +73,16 @@ button:hover, button:focus {
     text-align: justify;
 }
 
+.column>p:first-of-type{
+    padding-top: 5%;
+}
+
+.column>a>img:hover {
+    transition: transform 0.4s ease-out 0.1s;
+    transform: scale(1.1);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 3px 5px 0 rgba(0,0,0,0.19);
+}
+
 @media screen and (max-width: 880px) {
     .row {
         display: grid;
