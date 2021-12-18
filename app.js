@@ -7,13 +7,21 @@ function showImages(shows) {
             const div = document.createElement('DIV');
             const anchorTag = document.createElement('A');
             const img = document.createElement('IMG');
-            const text = document.createElement('P');
+            const paragraph = document.createElement('P');
+            let paragraphText = '';
             anchorTag.href = `http://www.imdb.com/title/${result.show.externals.imdb}`;
             anchorTag.target = '_blank';
             img.src = result.show.image.medium;
             anchorTag.append(img);
+            text = `<b>Name:</b> ${result.show.name} <br>
+                    <b>Genres:</b> ${result.show.genres} <br>
+                    <b>Average rating:</b> ${result.show.rating.average} <br>
+                    <b>Summary:</b> ${result.show.summary}`;
+            console.log(result.show.summary);
+            paragraph.innerHTML = text;
             div.className = 'column';
             div.append(anchorTag);
+            div.append(paragraph);
             row.append(div);
         }
         else {
