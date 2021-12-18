@@ -5,12 +5,19 @@ function showImages(shows) {
     for (let result of shows) {
         if (result.show.image) {
             const div = document.createElement('DIV');
+            const anchorTag = document.createElement('A');
             const img = document.createElement('IMG');
             const text = document.createElement('P');
+            anchorTag.href = `http://www.imdb.com/title/${result.show.externals.imdb}`;
+            anchorTag.target = '_blank';
             img.src = result.show.image.medium;
+            anchorTag.append(img);
             div.className = 'column';
-            div.append(img);
+            div.append(anchorTag);
             row.append(div);
+        }
+        else {
+            console.log(`Cannot display ${result.show.name} image`)
         }
     }
 }
