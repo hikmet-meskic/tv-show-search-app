@@ -4,10 +4,13 @@ const row = document.querySelector('.row');
 function showImages(shows) {
     for (let result of shows) {
         if (result.show.image) {
+            const div = document.createElement('DIV');
             const img = document.createElement('IMG');
+            const text = document.createElement('P');
             img.src = result.show.image.medium;
-            img.className = 'column';
-            row.append(img);
+            div.className = 'column';
+            div.append(img);
+            row.append(div);
         }
     }
 }
